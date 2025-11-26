@@ -38,6 +38,12 @@ function NavBar() {
       >
         Customers
       </NavLink>
+      <NavLink
+        to="/employees"
+        style={({ isActive }) => (isActive ? activeStyle : linkStyle)}
+      >
+        Employees
+      </NavLink>
 
       <NavLink
         to="/products"

@@ -22,6 +22,16 @@ export const api = {
     method: "POST",
     body: JSON.stringify(data),
   }),
+  updateCustomer: (id, data) => request(`/customers/${id}`, {
+  method: "PUT",
+  body: JSON.stringify(data),
+}),
+updateProduct: (id, data) => request(`/products/${id}`, {
+  method: "PUT",
+  body: JSON.stringify(data),
+}),
+
+
   deleteCustomer: id => request(`/customers/${id}`, { method: "DELETE" }),
 
   getProducts: () => request("/products"),
@@ -35,5 +45,18 @@ export const api = {
   createOrder: data => request("/orders", {
     method: "POST",
     body: JSON.stringify(data),
+  }),
+
+   getEmployees: () => request("/employees"),
+  createEmployee: (data) => request("/employees", {
+    method: "POST",
+    body: JSON.stringify(data)
+  }),
+  updateEmployee: (id, data) => request(`/employees/${id}`, {
+    method: "PUT",
+    body: JSON.stringify(data)
+  }),
+  deleteEmployee: (id) => request(`/employees/${id}`, {
+    method: "DELETE"
   }),
 };
